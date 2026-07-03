@@ -4,17 +4,6 @@ mode: rule
 log-level: info
 ipv6: false
 proxies:
-- name: Bangladesh 2
-  type: vmess
-  server: bd1.vpnjantit.com
-  port: 10000
-  uuid: ef421112-757e-11f1-b399-525401f40bae
-  alterId: 0
-  cipher: auto
-  network: ws
-  udp: true
-  ws-opts:
-    path: /vpnjantit
 - name: India 1
   type: vmess
   server: in6.vpnjantit.com
@@ -30,7 +19,6 @@ proxy-groups:
 - name: All-In-One-Group
   type: select
   proxies:
-  - Bangladesh 2
   - India 1
   - DIRECT
 rules:
