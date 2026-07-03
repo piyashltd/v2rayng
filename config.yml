@@ -15,11 +15,23 @@ proxies:
   udp: true
   ws-opts:
     path: /vpnjantit
+- name: India 1
+  type: vmess
+  server: in6.vpnjantit.com
+  port: 10000
+  uuid: b346a82a-770f-11f1-9076-c32a877ba99a
+  alterId: 0
+  cipher: auto
+  network: ws
+  udp: true
+  ws-opts:
+    path: /vpnjantit
 proxy-groups:
 - name: All-In-One-Group
   type: select
   proxies:
   - Bangladesh 2
+  - India 1
   - DIRECT
 rules:
 - MATCH,All-In-One-Group
