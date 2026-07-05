@@ -55,6 +55,22 @@ proxies:
     path: /vpnjantit
   tls: true
   skip-cert-verify: true
+- name: Singapore 4
+  type: vmess
+  server: sg5.vpnjantit.com
+  port: 10001
+  uuid: e4139578-7884-11f1-9bb1-0b851906dfd2
+  alterId: 0
+  cipher: auto
+  network: ws
+  udp: true
+  ws-opts:
+    path: /vpnjantit
+    headers:
+      Host: telegram.org
+  tls: true
+  skip-cert-verify: true
+  sni: telegram.org
 proxy-groups:
 - name: All-In-One-Group
   type: select
@@ -63,6 +79,7 @@ proxy-groups:
   - Singapore 1
   - Singapore 2
   - Singapore 3
+  - Singapore 4
   - DIRECT
 rules:
 - MATCH,All-In-One-Group
