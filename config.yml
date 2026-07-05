@@ -4,17 +4,6 @@ mode: rule
 log-level: info
 ipv6: false
 proxies:
-- name: India 1
-  type: vmess
-  server: in6.vpnjantit.com
-  port: 10000
-  uuid: b346a82a-770f-11f1-9076-c32a877ba99a
-  alterId: 0
-  cipher: auto
-  network: ws
-  udp: true
-  ws-opts:
-    path: /vpnjantit
 - name: Singapore 1
   type: vmess
   server: sg5.vpnjantit.com
@@ -75,7 +64,6 @@ proxy-groups:
 - name: All-In-One-Group
   type: select
   proxies:
-  - India 1
   - Singapore 1
   - Singapore 2
   - Singapore 3
