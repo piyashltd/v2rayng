@@ -4,19 +4,6 @@ mode: rule
 log-level: info
 ipv6: false
 proxies:
-- name: Singapore 3
-  type: vmess
-  server: sg5.vpnjantit.com
-  port: 10001
-  uuid: e4139578-7884-11f1-9bb1-0b851906dfd2
-  alterId: 0
-  cipher: auto
-  network: ws
-  udp: true
-  ws-opts:
-    path: /vpnjantit
-  tls: true
-  skip-cert-verify: true
 - name: Singapore 4
   type: vmess
   server: sg5.vpnjantit.com
@@ -37,7 +24,6 @@ proxy-groups:
 - name: All-In-One-Group
   type: select
   proxies:
-  - Singapore 3
   - Singapore 4
   - DIRECT
 rules:
